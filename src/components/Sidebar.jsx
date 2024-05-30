@@ -6,10 +6,10 @@ import { FaPlus } from "react-icons/fa6";
 import { BiLibrary } from "react-icons/bi";
 import { TbWorld } from "react-icons/tb";
 import Signup from "./Signup";
-export default function Sidebar() {
+const Sidebar=()=> {
     return (
 
-        <div className="w-[25%] h-full p-2 flex-col gap-2 text-white hideen lg-flex ">
+        <div className="w-1/4 h-full p-2 flex-col gap-2 text-white hideen lg-flex ">
             <div className="bg-[#121212] h-32 rounded-xl flex flex-col justify-around">
                 <div className="flex item-center gap-3 pl-7 cursor-pointer">
                     <img src={assets.logoWhite} alt="logo" className="w-[25%] h-9 p-1" />
@@ -24,7 +24,7 @@ export default function Sidebar() {
                 </div>
 
             </div>
-            <div className="bg-[#121212] h-[85%] rounded-xl mt-2">
+            <div className="bg-[#121212] h-[75%] rounded-xl mt-2">
                 <div className="p-4 flex items-center justify-between">
                     <div className="flex items-center gap-3 pl-4 cursor-pointer" title="Thu gọn thư viện">
                         <BiLibrary className="text-2xl" />
@@ -44,7 +44,7 @@ export default function Sidebar() {
                     <p>Chúng tôi sẽ cập nhật cho bạn thông tin về các tập mới</p>
                     <button className="px-3 py-1.5 bg-white text-[15px] text-black rounded-full mt-4 w-52 ">Duyệt xem podcast</button>
                 </div>
-                <div className="py-11 flex px-4 flex-wrap gap-4">
+                <div className="py-16 flex px-4 flex-wrap gap-4">
                     <a className="text-xs text-gray-200 px-4 " href="">Pháp lý</a>
                     <a className="text-xs text-gray-200 px-4" href="">Trung tâm an toàn và quyền riêng tư</a>
                     <a className="text-xs text-gray-200 px-4" href="">Chính sách quyền riêng tư</a>
@@ -53,7 +53,7 @@ export default function Sidebar() {
                     <a className="text-xs text-gray-200 px-4" href="">Hỗ trợ tiếp cận</a>
                     <a className="text-xs text-gray-200 px-4" href="">Cookie</a>
                 </div>
-                <div className="p-7">
+                <div className="p-9">
                     <button className=" px-3 p-1 flex gap-2 border-white border rounded-full">
                         <TbWorld className="text-xl" />
                         <span className="text-xs items-baseline">Tiếng Việt</span>
@@ -65,3 +65,4 @@ export default function Sidebar() {
         </div>
     );
 }
+export default Sidebar;

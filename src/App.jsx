@@ -1,16 +1,20 @@
 import React from 'react';
-import Sidebar from './components/Sidebar';
 import Home from './components/Home';
-import Signup from './components/Signup';
+import Signin from './components/Signin';
+import Register from './components/Register';
 import './App.css';
 import './index.css';
-export default function App() {
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+const App=()=> {
+ 
   return (
-    <div className="h-screen bg-black">
-      <div className="flex">
-        <Sidebar/>
-        <Home/>   
-      </div>   
-    </div>
+   <Router>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+   </Router>
   );
 }
+export default App;
