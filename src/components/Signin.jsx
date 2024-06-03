@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { assets } from '../assets/assets.js';
 import '../css/Signin.css'
@@ -81,5 +82,11 @@ function Signin() {
 
         </>
     );
+=======
+// import React from 'react'
+
+const Signin = () => {
+  return <div className="text-white">Signin</div>;
+>>>>>>> 152f6dac3ddc5387f2a77ba8cb642c4295e592fd
 };
 export default Signin;

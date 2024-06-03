@@ -10,11 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "material-icons-react": "^1.0.4",
+=======
+    "date-fns": "^3.6.0",
+>>>>>>> 152f6dac3ddc5387f2a77ba8cb642c4295e592fd
     "react": "^18.2.0",
+    "react-datepicker": "^6.9.0",
+    "react-day-picker": "^8.10.1",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "react-tailwindcss-datepicker": "^1.6.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
