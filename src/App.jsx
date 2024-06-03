@@ -5,16 +5,16 @@ import Register from './components/Register';
 import './App.css';
 import './index.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-const App=()=> {
- 
+const App = () => {
+
   return (
-   <Router>
+    <Router>
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/register" element={<Register />} />
       </Routes>
-   </Router>
+    </Router>
   );
 }
 export default App;
