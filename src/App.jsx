@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import Home from './components/Home';
-import Signin from './components/Signin';
-import Register from './components/Register';
-import './App.css';
-import './index.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-const App = () => {
 
-=======
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import Home from "./components/Home";
 import Signin from "./components/Signin";
-
 import "./App.css";
 import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -24,7 +12,6 @@ import SignupStep3 from "./components/Signup/SignupStep3";
 import SignupStep4 from "./components/Signup/SignupStep4";
 
 const App = () => {
->>>>>>> 152f6dac3ddc5387f2a77ba8cb642c4295e592fd
   return (
     <Router>
       <Routes>

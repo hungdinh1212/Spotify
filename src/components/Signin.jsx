@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react'
 import { assets } from '../assets/assets.js';
 import '../css/Signin.css'
@@ -6,7 +6,7 @@ import GoogleLogo from '../assets/GoogleLogo.jsx'
 function Signin() {
     return (
         <>
-            <div className='container py-10'>
+            <div className=' py-10'>
                 <div className='signin py-10 text-center w-1/2 mx-auto rounded-xl text-white'>
                     <div className='logo'>
                         <img className='mx-auto' src={assets.logoWhite} width={110}></img>
@@ -82,11 +82,5 @@ function Signin() {
 
         </>
     );
-=======
-// import React from 'react'
-
-const Signin = () => {
-  return <div className="text-white">Signin</div>;
->>>>>>> 152f6dac3ddc5387f2a77ba8cb642c4295e592fd
 };
 export default Signin;
