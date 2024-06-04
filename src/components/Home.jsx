@@ -3,6 +3,7 @@ import { IoIosArrowDropleft } from "react-icons/io";
 import { IoIosArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Layout from "./Layout";
+import Player from "./Player";
 const Home = () => {
   return (
     <Layout>
@@ -27,7 +28,9 @@ const Home = () => {
             </Link>
           </div>
         </div>
+        {/* <Player /> */}
       </div>
+    
     </Layout>
   );
 };

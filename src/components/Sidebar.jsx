@@ -6,7 +6,7 @@ import { assets } from "../assets/assets";
 import { FaPlus } from "react-icons/fa6";
 import { BiLibrary } from "react-icons/bi";
 import { TbWorld } from "react-icons/tb";
-
+import Player from "./Player";
 const Sidebar = () => {
   return (
     <div className="w-1/4 h-full p-2 flex-col gap-2 text-white hideen lg-flex ">
@@ -80,6 +80,7 @@ const Sidebar = () => {
           </button>
         </div>
       </div>
+      <Player/>
     </div>
   );
 };
