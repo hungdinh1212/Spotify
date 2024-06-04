@@ -4,10 +4,11 @@ import { IoIosArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Layout from "./Layout";
 import Player from "./Player";
+import Card from "./Card";
 const Home = () => {
   return (
     <Layout>
-      <div className="flex justify-between  h-full bg-[#121212] rounded mt-2">
+      <div className="flex-cols justify-between  h-full bg-[#121212] rounded mt-2">
         <div className="flex justify-between w-full h-[9%] items-center  bg-[#0d0d0d] p-3 ">
           <div className="text-[#353333] text-3xl flex gap-1 " role="button">
             <IoIosArrowDropleft />
@@ -28,9 +29,15 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        {/* <Player /> */}
+        <h2 className="text-white font-bold leading-7 text-3xl p-6">Nghệ sĩ</h2>
+        <div className="flex w-full gap-9">
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          </div>
       </div>
-    
     </Layout>
   );
 };

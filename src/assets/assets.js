@@ -6,11 +6,13 @@ import img1 from "./img1.jpg";
 import img2 from "./img2.jpg";
 import song1 from "./song1.mp3";
 import song2 from "./song2.mp3";
+ import SonTungMTP from "./SonTungMTP.jpg";
 export const assets = {
   logoWhite,
   errorSignup,
   apple,
   back,
+  SonTungMTP,
 };
 export const songsData = [
   {
