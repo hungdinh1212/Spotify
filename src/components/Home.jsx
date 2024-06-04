@@ -3,10 +3,11 @@ import { IoIosArrowDropleft } from "react-icons/io";
 import { IoIosArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Layout from "./Layout";
+import Card from "./Card";
 const Home = () => {
   return (
     <Layout>
-      <div className="flex justify-between  h-full bg-[#121212] rounded mt-2">
+      <div className="h-full bg-[#121212] rounded mt-2">
         <div className="flex justify-between w-full h-[9%] items-center  bg-[#0d0d0d] p-3 ">
           <div className="text-[#353333] text-3xl flex gap-1 " role="button">
             <IoIosArrowDropleft />
@@ -27,7 +28,19 @@ const Home = () => {
             </Link>
           </div>
         </div>
+        <div className="flex text-white justify-start font-extrabold text-2xl p-3 ">Nghệ sĩ yêu thích của bạn</div>
+        <div className="tertiary-bg">
+          <span className="text-white font-semibold flex justify-end pr-2 underline">Hiển thị tất cả</span>
+          <div className="grid grid-cols-5 px-4 py-4 ">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+        </div>
       </div>
+
     </Layout>
   );
 };
