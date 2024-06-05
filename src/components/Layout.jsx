@@ -1,6 +1,6 @@
 // import React from 'react'
 import Sidebar from "./Sidebar";
-
+import Player from "./Player";
 const Layout = ({ children }) => {
   return (
     <div className="flex">

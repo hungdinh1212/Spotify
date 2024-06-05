@@ -4,11 +4,14 @@
     cursor: pointer;
     transition: all 0.2s ease-in;
 }
+<<<<<<< HEAD
 
 .play-button {
     background-color: black;
 }
 
+=======
+>>>>>>> 28fe5a80551def136620874eeac85b0ad21aa6be
 .play-button svg {
     display: none !important;
     color: #1DB954;
