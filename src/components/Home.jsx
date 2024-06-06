@@ -29,15 +29,27 @@ const Home = () => {
             </Link>
           </div>
         </div>
+        <div className="flex text-white justify-start font-extrabold text-2xl p-3 ">Nghệ sĩ yêu thích của bạn</div>
+        <div className="tertiary-bg">
+          <span className="text-white font-semibold flex justify-end pr-2 underline">Hiển thị tất cả</span>
+          <div className="grid grid-cols-5 px-4 py-4 ">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+        </div>
         <h2 className="text-white font-bold leading-7 text-3xl p-6">Nghệ sĩ</h2>
         <div className="flex w-full gap-9">
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          </div>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </div>
+
     </Layout>
   );
 };
