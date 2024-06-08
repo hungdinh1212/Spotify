@@ -10,8 +10,13 @@
   list-style: none;
 }
 
-body {
+:root {
+  --secondary_bg: #121212;
+  --tertiary_bg: #242424;
+  --card_bg: #1e1e1e;
+}
 
+body {
   background: black;
 }
 ::-webkit-scrollbar{
