@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { songsData } from '../assets/assets';
+import React, { useContext } from 'react';
 import { RxShuffle } from "react-icons/rx";
 import { GiPreviousButton } from "react-icons/gi";
 import { FaPlayCircle, FaPause } from "react-icons/fa";
@@ -12,65 +11,38 @@ import { MdSpeakerGroup } from "react-icons/md";
 import { IoMdVolumeHigh } from "react-icons/io";
 import { MdOutlineZoomOutMap } from "react-icons/md";
 import { MdHorizontalRule } from "react-icons/md";
+import {PlayerContext} from "../context/PlayerContext";
 const Player = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const audioRef = useRef(new Audio(songsData[1].file));
-  useEffect(() => {
-    const audio = audioRef.current;
-    const handleTimeUpdate = () => {
-      setCurrentTime(audio.currentTime);
-    };
-
-    audio.addEventListener('timeupdate', handleTimeUpdate);
-
-    return () => {
-      audio.removeEventListener('timeupdate', handleTimeUpdate);
-    };
-  }, []);
-
-  const handlePlayPause = () => {
-    const audio = audioRef.current;
-    if (isPlaying) {
-      audio.pause();
-    } else {
-      audio.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
-
-  const progress = (currentTime / audioRef.current.duration) * 100 || 0;
-
-  return (
-    <div className="h-[10%] bg-black flex justify-between items-center text-white px-4 fixed w-full">
+const { seekBar,seekBg, play, pause,playStatus, time,track } =  useContext(PlayerContext)
+return (
+    <div className="h-[10%] bg-black flex justify-between items-center text-white px-4  w-full">
       <div className="lg-flex items-center flex gap-4">
-        <img className="rounded-lg" width="50px" src={songsData[1].image} alt="hi" />
+        <img className="rounded-lg" width="50px" src={track.image} alt="hi" />
         <div>
-          <p className="text-sm font-bold">{songsData[1].name}</p>
-          <p className="text-xs">{songsData[1].description}</p>
+          <p className="text-sm font-bold">{track.name}</p>
+          <p className="text-xs">{track.description}</p>
         </div>
       </div>
       <div className="flex flex-col items-center gap-1 m-auto">
         <div className="flex gap-4">
-          <RxShuffle size={40} className="w-5 cursor-pointer" />
+          <RxShuffle size={40} className="w-5 cursor-pointer"/>
           <GiPreviousButton size={40} className="w-5 cursor-pointer" />
-          {isPlaying ? (
-            <FaPause size={40} className="w-7 cursor-pointer" onClick={handlePlayPause} />
+          {playStatus ? (
+            <FaPause size={40} className="w-7 cursor-pointer" onClick={pause}/>
           ) : (
-            <FaPlayCircle size={40} className="w-7 cursor-pointer" onClick={handlePlayPause} />
+            <FaPlayCircle size={40} className="w-7 cursor-pointer" onClick={play} />
           )}
           <GiNextButton size={40} className="w-5 cursor-pointer" />
           <SlLoop size={40} className="w-5 cursor-pointer" />
         </div>
         <div className="flex items-center gap-5">
-          <p>{Math.floor(currentTime / 60)}:{Math.floor(currentTime % 60).toString().padStart(2, '0')}</p>
-          <div className="w-[60vw] max-w-[500px] bg-gray-300 rounded-full cursor-pointer">
-            <div
-              className="h-1 bg-green-400 rounded-full"
-              style={{ width: `${progress}%` }}
+          <p>{time.currentTime.minute}:{time.currentTime.second}</p>
+          <div ref={seekBg}className="w-[60vw] max-w-[500px] bg-gray-300 rounded-full cursor-pointer">
+            <hr ref={seekBar}
+              className="h-1 border-none bg-green-400 rounded-full"         
             />
           </div>
-          <p>{songsData[1].duration}</p>
+          <p>{time.totalTime.minute}:{time.totalTime.second}</p>
         </div>
       </div>
       <div className="lg:flex items-center gap-2 opacity-75">

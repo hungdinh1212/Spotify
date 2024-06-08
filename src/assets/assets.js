@@ -7,6 +7,8 @@ import img2 from "./img2.jpg";
 import song1 from "./song1.mp3";
 import song2 from "./song2.mp3";
  import SonTungMTP from "./SonTungMTP.jpg";
+ import album1 from "./Ablums/album1.jpg";
+ import album2 from "./Ablums/album2.jpg"
 export const assets = {
   logoWhite,
   errorSignup,
@@ -30,5 +32,23 @@ export const songsData = [
     file:song2,
     description:"Jack J97",
     duration:"3:40",
+  }
+]
+export const albumsData = [
+  {
+    id:0,
+    name:"Chúng ta của tương lai",
+    image:img1,
+    description:"Sơn Tùng MTP",
+  },
+  {
+    id:1,
+    name:"Daily Mix 1",
+    image:album2,
+    description:"Sơn Tùng M-TP,Bích Phương,Jack-J97 và nhiều hơn nữa",
+  },
+  {
+    
+
   }
 ]

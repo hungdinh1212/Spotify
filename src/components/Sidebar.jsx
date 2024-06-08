@@ -7,7 +7,10 @@ import { FaPlus } from "react-icons/fa6";
 import { BiLibrary } from "react-icons/bi";
 import { TbWorld } from "react-icons/tb";
 import Player from "./Player";
+import {useContext} from "react"
+// import {PlayerContext} from "../context/PlayerContext"
 const Sidebar = () => {
+  // const {audioRef,track} =useContext(PlayerContext);
   return (
     <div className="w-1/4 h-full p-2 flex-col gap-2 text-white hideen lg-flex ">
       <div className="bg-[#121212] h-32 rounded-xl flex flex-col justify-around">
@@ -79,8 +82,9 @@ const Sidebar = () => {
             <span className="text-xs items-baseline">Tiếng Việt</span>
           </button>
         </div>
+    
       </div>
-      <Player/>
+      {/* // <audio ref={audioRef} src={track.file} reload="auto"></audio> */} 
     </div>
   );
 };
