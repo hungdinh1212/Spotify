@@ -1,6 +1,7 @@
 import { assets } from "../assets/assets";
 import "../css/Card.css"
 import { FaPlayCircle } from "react-icons/fa";
+import "../css/Card.css"
 const Card = () => {
     return (
         <div className="card col-span-1 rounded-lg h-72 flex flex-col justify-between">
