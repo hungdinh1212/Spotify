@@ -1,20 +1,18 @@
-import { assets } from "../assets/assets";
+import React from "react";
 import "../css/Card.css"
 import { FaPlayCircle } from "react-icons/fa";
-import "../css/Card.css"
-const Card = () => {
+const Card = ({ artist, onClick }) => {
+
     return (
-        <div className="card col-span-1 rounded-lg h-72 flex flex-col justify-between">
-            <img className=" rounded-full w-full p-3 " src={assets.SonTungMTP} alt="placeholder">
+        <div className="card rounded-lg h-72 flex flex-col max-w-[16.5%] relative  " onClick={onClick}>
+            <img className=" rounded-full w-full p-3 " src={artist.image} alt="placeholder">
             </img>
-            <button className="play-button absolute mt-40 ml-40 rounded-3xl">
+            <button className="play-button absolute rounded-3xl bottom-[110px] right-6">
                 <FaPlayCircle />
             </button>
-
-            <h3 className="text-lg font-semibold text-white pl-3 ">Sơn Tùng MTP</h3>
-            <p className="text-xs text-gray-400 pb-2 font-semibold pl-3">Nghệ sĩ</p>
+            <h3 className="text-lg font-semibold text-white pl-3 ">{artist.nameArtist}</h3>
+            <p className="text-xs text-gray-400 pb-2 font-semibold pl-3">{artist.profession}</p>
         </div>
-
 
     );
 };
